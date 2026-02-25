@@ -3,14 +3,13 @@ sidebar:
   education: True
 
   # Información principal
-  name: Răzvan V. C.
+  name: Razvan Virgil Craciun
   tagline: Senior Full Stack Engineer · Java/Spring · React · Data Platforms
   avatar: profile.png
 
   # Contacto
-  email: contacto@razvan.dev
-  phone: "+34 600 000 000"
-  website: razvanvc.dev
+  email: razvanvc@yahoo.com
+  phone: "+34 686 444 292"
   linkedin: razvanvc
   github: razvanvc
   twitter:
@@ -34,25 +33,18 @@ sidebar:
 career-profile:
   title: Perfil profesional
   summary: |
-    Ingeniero de software **full stack** con +4 años de experiencia en consultoría y producto,
-    construyendo soluciones de extremo a extremo (frontend, backend y datos) para banca e
-    industria.
+    Ingeniero de software **full stack** con +6 años de experiencia en consultoría y producto,
+    construyendo soluciones E2E (frontend, backend y datos) para banca e industria.
 
-    Especializado en **Java/Spring**, **SQL/MySQL**, **React/TypeScript** y ecosistemas de datos
+    Especializado en **Java/Spring**, **SQL/MySQL**, **React/TypeScript** y ecosistemas BI
     (ActiveViam/Atoti), con foco en **calidad**, **rendimiento** y entregables mantenibles.
     Acostumbrado a trabajar con equipos multidisciplinares, **interlocución con cliente**,
     mentoría y revisión de PRs.
 
 education:
-  - degree: Ingeniería Informática
-    university: Universidad Politécnica de Bucarest
-    time: 2012 - 2016
-    details: |
-      Base sólida en estructuras de datos, bases de datos, redes y arquitectura de sistemas.
-
   - degree: Máster Universitario en Desarrollo Ágil de Software para la Web
     university: Universidad de Alcalá (UAH)
-    time: 2016
+    time: 2022 - 2024
     details: |
       Enfoque en desarrollo web moderno, buenas prácticas, metodologías ágiles y entrega continua.
 
@@ -74,6 +66,11 @@ experiences:
         - Colaboración directa con stakeholders y equipos técnicos.
         - En paralelo (ecosistema Intrum/Fénix): trabajo intensivo con **MySQL**, **Liquibase**,
           **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
+      Consultoría en cliente (Intrum) con implantación y evolución de soluciones basadas en **Java/Spring**.
+        - Desarrollo full stack y entrega de funcionalidades orientadas a negocio.
+        - Diseño/implementación de componentes de datos y gestión de BBDD (DBA)
+        - Optimización de procesos criticos
+        - Trabajo intensivo con **MySQL**, **Liquibase**, **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
 
   - role: Engineer · Full Stack Web Developer
     time: mayo 2021 - enero 2025
@@ -95,7 +92,7 @@ experiences:
 projects:
   title: Proyectos destacados
   intro: >
-    Selección de proyectos representativos (ampliables según el puesto objetivo).
+    Selección de proyectos representativos.
   assignments:
     - title: Plataforma ActiveViam (banca)
       link:
@@ -104,10 +101,6 @@ projects:
     - title: Ecosistema Fénix / Campañas RREE (Intrum)
       link:
       tagline: "Backend Java/Spring Batch + MySQL/Liquibase: planificación de envíos, filtros, rendimiento e idempotencia."
-
-    - title: WeeklyFocus (digital products)
-      link:
-      tagline: "Diseño y automatización de productos digitales (planners/plantillas) para venta online."
 
 publications:
 
@@ -130,6 +123,3 @@ skills:
       level: 80%
     - name: Docker · CI/CD (Jenkins/Azure Pipelines)
       level: 80%
-
-footer: >
-  CV generado con Jekyll · Diseñado para web y exportación a PDF.
