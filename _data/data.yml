@@ -4,7 +4,7 @@ sidebar:
 
   # Información principal
   name: Răzvan V. C.
-  tagline: Desarrollador Full Stack
+  tagline: Senior Full Stack Engineer · Java/Spring · React · Data Platforms
   avatar: profile.png
 
   # Contacto
@@ -18,7 +18,7 @@ sidebar:
 
   languages:
     - idiom: Español
-      level: Profesional
+      level: Nativo
     - idiom: Inglés
       level: Avanzado
     - idiom: Rumano
@@ -26,91 +26,109 @@ sidebar:
 
   interests:
     - item: Arquitectura de software
+    - item: Sistemas distribuidos y rendimiento
+    - item: Data platforms (cubos, reporting)
     - item: Producto digital
-    - item: IA aplicada
+    - item: IA aplicada y automatización
 
 career-profile:
   title: Perfil profesional
   summary: |
-    Ingeniero de software con enfoque **full stack** y experiencia construyendo
-    productos web escalables, desde prototipo hasta producción.
+    Ingeniero de software **full stack** con +4 años de experiencia en consultoría y producto,
+    construyendo soluciones de extremo a extremo (frontend, backend y datos) para banca e
+    industria.
 
-    Me especializo en crear soluciones mantenibles, con buena experiencia de
-    usuario y foco en impacto de negocio.
+    Especializado en **Java/Spring**, **SQL/MySQL**, **React/TypeScript** y ecosistemas de datos
+    (ActiveViam/Atoti), con foco en **calidad**, **rendimiento** y entregables mantenibles.
+    Acostumbrado a trabajar con equipos multidisciplinares, **interlocución con cliente**,
+    mentoría y revisión de PRs.
 
 education:
   - degree: Ingeniería Informática
     university: Universidad Politécnica de Bucarest
     time: 2012 - 2016
     details: |
-      Formación orientada a estructuras de datos, bases de datos,
-      redes, arquitectura de sistemas y desarrollo de software.
+      Base sólida en estructuras de datos, bases de datos, redes y arquitectura de sistemas.
+
+  - degree: Máster Universitario en Desarrollo Ágil de Software para la Web
+    university: Universidad de Alcalá (UAH)
+    time: 2016
+    details: |
+      Enfoque en desarrollo web moderno, buenas prácticas, metodologías ágiles y entrega continua.
+
+  - degree: Ingeniería en Sistemas de Información
+    university: Universidad de Alcalá (UAH)
+    time: 2018 - 2022
+    details: |
+      Formación aplicada a sistemas de información, modelado de datos, ingeniería de software
+      y proyectos.
 
 experiences:
-  - role: Senior Full Stack Developer
-    time: 2021 - Actualidad
-    company: Consultoría tecnológica · Remoto
+  - role: Senior Consultant / Senior Full Stack Engineer
+    time: enero 2025 - Actualidad
+    company: NFQ Consulting · Madrid (Remoto/Híbrido)
     details: |
-      Desarrollo y evolución de aplicaciones web para clientes internacionales.
-        - Diseño de arquitectura frontend/backend.
-        - Implementación de APIs y automatizaciones.
-        - Mejora de rendimiento y calidad de código.
-        - Mentoría técnica y revisión de PRs.
+      Consultoría en cliente (Santander) con implantación y evolución de soluciones basadas en **ActiveViam**.
+        - Desarrollo full stack y entrega de funcionalidades orientadas a negocio.
+        - Diseño/implementación de componentes de datos (cubos, modelos, reporting).
+        - Colaboración directa con stakeholders y equipos técnicos.
+        - En paralelo (ecosistema Intrum/Fénix): trabajo intensivo con **MySQL**, **Liquibase**,
+          **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
 
-  - role: Full Stack Developer
-    time: 2018 - 2021
-    company: Producto SaaS · Madrid
+  - role: Engineer · Full Stack Web Developer
+    time: mayo 2021 - enero 2025
+    company: NTT DATA · Madrid
     details: |
-      Participación en el ciclo completo del producto: discovery, desarrollo,
-      despliegue y soporte.
-        - Construcción de funcionalidades end-to-end.
-        - Integración con servicios de terceros.
-        - Optimización de UX y métricas de conversión.
+      Proyectos en banca (Sabadell, Santander, BBVA) con foco en plataformas de datos y producto.
+        - Banc Sabadell: solución de recomendación de inversión (validaciones, normalizaciones e integraciones).
+        - Banco Santander: migración **Active Pivot 3.6 → 6**, construcción de cubos (PnL, VaR) y dashboards.
+        - Banco BBVA: reporting en **Atoti** (XVA, PnL), diseño de arquitectura y toma de requisitos con cliente.
+        - Participación en iniciativas internas de I+D+i y **mentorización de perfiles junior**.
 
-  - role: Frontend Developer
-    time: 2016 - 2018
-    company: Agencia digital · Valencia
+  - role: Android Developer
+    time: febrero 2020 - abril 2021
+    company: Universidad de Alcalá · Alcalá de Henares
     details: |
-      Desarrollo de interfaces responsive y mantenimiento de múltiples proyectos.
-        - Maquetación accesible y compatible con navegadores.
-        - Colaboración estrecha con diseño y SEO.
+      Desarrollo de aplicación Android (Java) para captura de datos de un estudio de comportamiento de aves.
+        - Toma de requisitos, desarrollo end-to-end, puesta en producción y soporte.
 
 projects:
   title: Proyectos destacados
   intro: >
-    Selección de proyectos representativos. Pueden ampliarse con más detalle
-    según el puesto objetivo.
+    Selección de proyectos representativos (ampliables según el puesto objetivo).
   assignments:
-    - title: Plataforma de gestión interna
+    - title: Plataforma ActiveViam (banca)
       link:
-      tagline: "Aplicación para automatizar procesos operativos y reporting de negocio."
+      tagline: "Migración de plataforma, modelado de cubos (PnL/VaR) y dashboards orientados a negocio."
 
-    - title: Portal de cliente B2B
+    - title: Ecosistema Fénix / Campañas RREE (Intrum)
       link:
-      tagline: "Reducción del tiempo de soporte gracias a autoservicio y documentación contextual."
+      tagline: "Backend Java/Spring Batch + MySQL/Liquibase: planificación de envíos, filtros, rendimiento e idempotencia."
 
-    - title: Dashboard de analítica
+    - title: WeeklyFocus (digital products)
       link:
-      tagline: "Visualización de KPIs en tiempo real con alertas y filtros avanzados."
+      tagline: "Diseño y automatización de productos digitales (planners/plantillas) para venta online."
 
 publications:
 
 skills:
   title: Habilidades técnicas
   toolset:
-    - name: JavaScript / TypeScript
-      level: 95%
-    - name: React / Next.js
-      level: 92%
-    - name: Node.js / APIs REST
+    - name: Java · Spring Boot · Spring Batch
       level: 90%
-    - name: HTML / CSS / Sass
-      level: 95%
-    - name: SQL / PostgreSQL
+    - name: SQL (MySQL/PostgreSQL) · Performance tuning
+      level: 88%
+    - name: Liquibase · Modelado relacional · Migraciones
       level: 85%
-    - name: Testing (Jest, Cypress)
-      level: 82%
-    - name: Docker / CI/CD
+    - name: JavaScript / TypeScript
+      level: 90%
+    - name: React / Next.js
+      level: 88%
+    - name: ActiveViam (ActivePivot / Atoti)
+      level: 85%
+    - name: Testing (JUnit, Jest, Cypress)
+      level: 80%
+    - name: Docker · CI/CD (Jenkins/Azure Pipelines)
       level: 80%
 
 footer: >
