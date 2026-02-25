@@ -4,7 +4,9 @@
         size: A4;
     }
     body {
-       font-size: 12pt;
+       font-size: 11pt;
+       padding: 0;
+       background: #fff;
     }
 
     img.avatar {
@@ -14,17 +16,33 @@
    .main-wrapper .time {
        float: right;
         color: black !important;
-        -webkit-print-color-adjust: exact; 
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
    }
     .sidebar-wrapper {
         position: static;
         float: right;
         width: 40%;
-        -webkit-print-color-adjust: exact; 
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
     .remove-container.container-block {
        display: none;
+    }
+
+    .print-cv-btn {
+       display: none !important;
+    }
+
+    .wrapper {
+       max-width: 100%;
+       box-shadow: none;
+    }
+
+    .main-wrapper {
+       padding: 24px;
+       padding-right: 38%;
     }
 
     footer {
@@ -33,7 +51,8 @@
 
     .skillset .level-bar-inner {
        background-color: black !important;
-       -webkit-print-color-adjust: exact; 
+       -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
 }
