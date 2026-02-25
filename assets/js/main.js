@@ -4,6 +4,14 @@ jQuery(document).ready(function($) {
     
     $(window).on('load', function() {
 
+
+    var printButton = document.getElementById('print-cv');
+    if (printButton) {
+        printButton.addEventListener('click', function() {
+            window.print();
+        });
+    }
+
         $('.level-bar-inner').each(function() {
         
             var itemWidth = $(this).data('level');
