@@ -40,7 +40,9 @@ p {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  @include box-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+  border-radius: 6px;
+  overflow: hidden;
+  @include box-shadow(0px 4px 12px rgba(0, 0, 0, 0.12));
 }
 
 .sidebar-wrapper {
@@ -53,35 +55,34 @@ p {
   }
   .profile-container {
     padding: 30px;
-    //background: darken($theme-color, 10%);
     background: rgba(0, 0, 0, 0.2);
     text-align: center;
     color: #fff;
   }
   .name {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 900;
     margin-top: 0;
     margin-bottom: 10px;
   }
   .tagline {
-    color: rgba(256, 256, 256, 0.6);
-    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 0;
+    line-height: 1.4;
   }
   .profile {
     margin-bottom: 15px;
   }
 
   .avatar {
-    //used for profile image
-    max-width: 100px;
+    max-width: 120px;
     margin-bottom: 15px;
-    border: 0px solid #fff;
+    border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 100%;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
   .contact-list {
     .fas,
@@ -121,20 +122,20 @@ p {
       }
     }
     .meta {
-      color: rgba(256, 256, 256, 0.6);
+      color: rgba(255, 255, 255, 0.6);
       font-weight: 500;
       margin-bottom: 0px;
       margin-top: 0;
     }
     .time {
-      color: rgba(256, 256, 256, 0.6);
+      color: rgba(255, 255, 255, 0.6);
       font-weight: 500;
       margin-bottom: 0px;
     }
   }
   .languages-container {
     .lang-desc {
-      color: rgba(256, 256, 256, 0.6);
+      color: rgba(255, 255, 255, 0.6);
     }
   }
 
@@ -166,22 +167,30 @@ p {
   padding: 60px;
   .section-title {
     text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     color: darken($theme-color, 15%);
     position: relative;
     margin-top: 0;
     margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid lighten($theme-color, 30%);
   }
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   .experiences-section,
-  .recommendations-section,
   .educations-section {
     .item {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid $divider;
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
     }
   }
   .upper-row,
@@ -217,6 +226,17 @@ p {
   .cert-org {
     margin-bottom: 10px;
     color: $text-grey;
+  }
+
+  .details {
+    ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+      li {
+        margin-bottom: 4px;
+        line-height: 1.5;
+      }
+    }
   }
 
   .project-title {
@@ -277,10 +297,13 @@ p {
   .level-bar {
     height: 12px;
     background: $smoky-white;
+    border-radius: 6px;
+    overflow: hidden;
   }
   .level-bar-inner {
     height: 12px;
     background: lighten($theme-color, 15%);
+    border-radius: 6px;
   }
 }
 
@@ -300,7 +323,7 @@ p {
 .print-button {
   position: fixed;
   top: 20px;
-  right: 120px; // Changed from 20px to make space for the PDF button
+  right: 120px;
   z-index: 1000;
   background: $theme-color;
   color: #fff;

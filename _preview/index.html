@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Resume</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beautiful Jekyll theme for creating resume">
+
+  <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/plugins/font-awesome/css/all.css">
+
+  <!-- Inline compiled CSS (since we can't run SASS without Ruby) -->
+  <style>
+    /* === Blue skin variables === */
+    /* === Mixins (inlined) === */
+    /* === Base === */
+    body {
+      font-family: "Roboto", sans-serif;
+      color: #545E6C;
+      background: #f5f5f5;
+      font-size: 14px;
+      padding: 30px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+    a { color: #2d8a9e; }
+    a:hover { text-decoration: underline; color: #1f6b7c; }
+    a:focus { text-decoration: none; }
+    p { line-height: 1.5; }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      background: #42A8C0;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .sidebar-wrapper {
+      grid-column: span 3;
+      order: 0;
+      background: #42A8C0;
+      color: #fff;
+    }
+    .sidebar-wrapper a { color: #fff; }
+    .sidebar-wrapper .profile-container {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: #fff;
+    }
+    .sidebar-wrapper .name {
+      font-size: 28px;
+      font-weight: 900;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .sidebar-wrapper .tagline {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+    .sidebar-wrapper .avatar {
+      max-width: 120px;
+      margin-bottom: 15px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .sidebar-wrapper .contact-list .fas,
+    .sidebar-wrapper .contact-list .fab,
+    .sidebar-wrapper .contact-list .far {
+      margin-right: 5px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+    .sidebar-wrapper .contact-list li {
+      margin-bottom: 15px;
+    }
+    .sidebar-wrapper .contact-list li:last-child { margin-bottom: 0; }
+    .sidebar-wrapper .container-block { padding: 30px; }
+    .sidebar-wrapper .container-block-title {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .sidebar-wrapper .degree {
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .sidebar-wrapper .education-container .item { margin-bottom: 15px; }
+    .sidebar-wrapper .education-container .item:last-child { margin-bottom: 0; }
+    .sidebar-wrapper .education-container .meta,
+    .sidebar-wrapper .education-container .time {
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 500;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    .sidebar-wrapper .languages-container .lang-desc { color: rgba(255, 255, 255, 0.6); }
+    .sidebar-wrapper .languages-list,
+    .sidebar-wrapper .interests-list { margin-bottom: 0; }
+    .sidebar-wrapper .languages-list li,
+    .sidebar-wrapper .interests-list li { margin-bottom: 10px; }
+    .sidebar-wrapper .languages-list li:last-child,
+    .sidebar-wrapper .interests-list li:last-child { margin-bottom: 0; }
+
+    .main-wrapper {
+      grid-column: span 7;
+      order: 1;
+      background: #fff;
+      padding: 60px;
+    }
+    .main-wrapper .section-title {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      color: #2d8a9e;
+      position: relative;
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #8dd0e0;
+    }
+    .main-wrapper .section { margin-bottom: 40px; }
+    .main-wrapper .experiences-section .item,
+    .main-wrapper .educations-section .item {
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .main-wrapper .experiences-section .item:last-child,
+    .main-wrapper .educations-section .item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .main-wrapper .upper-row,
+    .main-wrapper .second-upper-row {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2px;
+      display: flex;
+    }
+    .main-wrapper .job-title,
+    .main-wrapper .degree,
+    .main-wrapper .cert-title {
+      color: #3F4650;
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: 500;
+      flex: 75%;
+    }
+    .main-wrapper .time {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #97AAC3;
+      flex: 25%;
+    }
+    .main-wrapper .company,
+    .main-wrapper .university {
+      margin-bottom: 10px;
+      color: #97AAC3;
+    }
+    .main-wrapper .details ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+    .main-wrapper .details ul li {
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+    .main-wrapper .project-title {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 5px;
+      color: #2d8a9e;
+    }
+    .main-wrapper .projects-section .intro { margin-bottom: 30px; }
+    .main-wrapper .projects-section .item { margin-bottom: 15px; }
+
+    .skillset .item { margin-bottom: 15px; overflow: hidden; }
+    .skillset .level-title { font-size: 14px; margin-top: 0; margin-bottom: 12px; }
+    .skillset .level-bar {
+      height: 12px;
+      background: #f5f5f5;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .skillset .level-bar-inner {
+      height: 12px;
+      background: #6ec0d4;
+      border-radius: 6px;
+    }
+
+    .footer { padding-top: 30px; }
+    .footer .copyright { line-height: 1.6; color: #545E6C; font-size: 13px; }
+
+    .print-button {
+      position: fixed; top: 20px; right: 120px; z-index: 1000;
+      background: #42A8C0; color: #fff; padding: 8px 15px;
+      border-radius: 4px; border: none; cursor: pointer; font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15); transition: all 0.3s ease;
+    }
+    .print-button:hover { background: #358a9e; transform: translateY(-1px); }
+    .print-button .fas { margin-right: 5px; }
+
+    .pdf-button {
+      position: fixed; top: 20px; right: 20px; z-index: 1000;
+      background: #42A8C0; color: #fff; padding: 8px 15px;
+      border-radius: 4px; border: none; cursor: pointer; font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15); transition: all 0.3s ease;
+    }
+    .pdf-button:hover { background: #358a9e; transform: translateY(-1px); }
+    .pdf-button:disabled { opacity: 0.7; cursor: not-allowed; }
+    .pdf-button .fas { margin-right: 5px; }
+
+    /* Utilities */
+    .d-flex { display: flex; }
+    .ml-auto { margin-left: auto; }
+    .mr-1 { margin-right: 0.5rem; }
+    .mb-1 { margin-bottom: 0.5rem; }
+
+    /* Responsive */
+    @media (max-width: 767px) {
+      body { padding: 0; }
+      .sidebar-wrapper { position: static; width: inherit; }
+      .wrapper { display: block; }
+      .main-wrapper { padding: 30px; }
+      .main-wrapper .time { position: static; display: block; margin-top: 5px; }
+      .main-wrapper .upper-row { margin-bottom: 0; }
+    }
+    @media (min-width: 992px) {
+      .skillset .level-title { float: left; width: 30%; margin-bottom: 0; }
+      .skillset .level-bar { width: 70%; float: left; position: relative; top: 1px; }
+    }
+    .skillset .level-bar-inner {
+      width: auto;
+      transition: width 2s ease-in-out;
+    }
+
+    .remove-container.container-block { display: none; }
+
+    /* Print + PDF page-break safety */
+    .section, .item, .container-block { page-break-inside: avoid; break-inside: avoid; }
+
+    @media print {
+      @page { size: A4; margin: 10mm; }
+      body { font-size: 9pt; background-color: white; padding: 0; }
+      .wrapper { max-width: 100%; border-radius: 0; box-shadow: none; }
+      .main-wrapper { padding: 30px; }
+      .main-wrapper .section { margin-bottom: 20px; }
+      .main-wrapper .section-title { font-size: 14pt; margin-bottom: 10px; padding-bottom: 5px; }
+      .main-wrapper .experiences-section .item,
+      .main-wrapper .educations-section .item { margin-bottom: 15px; padding-bottom: 15px; }
+      .sidebar-wrapper { position: static; -webkit-print-color-adjust: exact; }
+      footer { display: none; }
+      .skillset, .container-block { break-inside: avoid; }
+      .item { break-inside: avoid; }
+      .skillset .level-bar-inner { background-color: #42A8C0 !important; -webkit-print-color-adjust: exact; }
+      .fa-inverse, .fa-inverse:after, .fa-inverse:before { color: #ffffff !important; }
+      .print-button, .pdf-button, .d-print-none { display: none !important; }
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <button onclick="window.print()" class="print-button d-print-none">
+    <i class="fas fa-file-pdf"></i>Print
+  </button>
+
+  <button onclick="generatePDF()" class="pdf-button d-print-none" id="pdfButton">
+    <i class="fas fa-file-pdf"></i>PDF
+  </button>
+
+  <div class="wrapper">
+    <!-- SIDEBAR -->
+    <div class="sidebar-wrapper">
+      <div class="profile-container">
+        <img class="avatar" src="../assets/images/profile.png" alt="profile picture" />
+        <h1 class="name">Razvan Virgil Craciun</h1>
+        <h3 class="tagline">Senior Full Stack Engineer · Java/Spring · React · Data Platforms</h3>
+      </div>
+
+      <div class="contact-container container-block">
+        <ul class="list-unstyled contact-list">
+          <li class="email"><i class="fas fa-envelope"></i>
+            <a href="mailto:razvanvc@yahoo.com">razvanvc@yahoo.com</a>
+          </li>
+          <li class="phone"><i class="fas fa-phone"></i>
+            <a href="tel:+34 686 444 292">+34 686 444 292</a>
+          </li>
+          <li class="linkedin"><i class="fab fa-linkedin"></i>
+            <a href="https://linkedin.com/in/razvanvc" target="_blank">razvanvc</a>
+          </li>
+          <li class="github"><i class="fab fa-github"></i>
+            <a href="https://github.com/razvanvc" target="_blank">razvanvc</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="education-container container-block">
+        <h2 class="container-block-title">Formación académica</h2>
+        <div class="item">
+          <h4 class="degree">Máster Universitario en Desarrollo Ágil de Software para la Web</h4>
+          <h5 class="meta">Universidad de Alcalá (UAH)</h5>
+          <div class="time">2022 - 2024</div>
+        </div>
+        <div class="item">
+          <h4 class="degree">Ingeniería en Sistemas de Información</h4>
+          <h5 class="meta">Universidad de Alcalá (UAH)</h5>
+          <div class="time">2018 - 2022</div>
+        </div>
+      </div>
+
+      <div class="languages-container container-block">
+        <h2 class="container-block-title">Idiomas</h2>
+        <ul class="list-unstyled interests-list">
+          <li>Español <span class="lang-desc">(Nativo)</span></li>
+          <li>Inglés <span class="lang-desc">(Avanzado)</span></li>
+          <li>Rumano <span class="lang-desc">(Nativo)</span></li>
+        </ul>
+      </div>
+
+      <div class="interests-container container-block">
+        <h2 class="container-block-title">Intereses</h2>
+        <ul class="list-unstyled interests-list">
+          <li>Arquitectura de software</li>
+          <li>Sistemas distribuidos y rendimiento</li>
+          <li>Data platforms (cubos, reporting)</li>
+          <li>Producto digital</li>
+          <li>IA aplicada y automatización</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-wrapper">
+
+      <!-- Career Profile -->
+      <section class="section summary-section">
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+          </span>
+          Perfil profesional
+        </h2>
+        <div class="summary">
+          <p>Ingeniero de software <strong>full stack</strong> con +6 años de experiencia en consultoría y producto,
+          construyendo soluciones E2E (frontend, backend y datos) para banca e industria.</p>
+          <p>Especializado en <strong>Java/Spring</strong>, <strong>SQL/MySQL</strong>, <strong>React/TypeScript</strong> y ecosistemas BI
+          (ActiveViam/Atoti), con foco en <strong>calidad</strong>, <strong>rendimiento</strong> y entregables mantenibles.
+          Acostumbrado a trabajar con equipos multidisciplinares, <strong>interlocución con cliente</strong>,
+          mentoría y revisión de PRs.</p>
+        </div>
+      </section>
+
+      <!-- Experiences -->
+      <section class="section experiences-section">
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+          </span>
+          Experiencia profesional
+        </h2>
+
+        <div class="item">
+          <div class="meta">
+            <div class="upper-row">
+              <h3 class="job-title">Senior Consultant / Senior Full Stack Engineer</h3>
+              <div class="time">enero 2025 - Actualidad</div>
+            </div>
+            <div class="company">NFQ Consulting · Madrid (Remoto/Híbrido)</div>
+          </div>
+          <div class="details">
+            <p>Consultoría en cliente (Santander) con implantación y evolución de soluciones basadas en <strong>ActiveViam</strong>.</p>
+            <ul>
+              <li>Desarrollo full stack y entrega de funcionalidades orientadas a negocio.</li>
+              <li>Diseño/implementación de componentes de datos (cubos, modelos, reporting).</li>
+              <li>Colaboración directa con stakeholders y equipos técnicos.</li>
+              <li>En paralelo (ecosistema Intrum/Fénix): trabajo intensivo con <strong>MySQL</strong>, <strong>Liquibase</strong>,
+                <strong>Spring Boot/Spring Batch</strong>, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.</li>
+            </ul>
+            <p>Consultoría en cliente (Intrum) con implantación y evolución de soluciones basadas en <strong>Java/Spring</strong>.</p>
+            <ul>
+              <li>Desarrollo full stack y entrega de funcionalidades orientadas a negocio.</li>
+              <li>Diseño/implementación de componentes de datos y gestión de BBDD (DBA)</li>
+              <li>Optimización de procesos criticos</li>
+              <li>Trabajo intensivo con <strong>MySQL</strong>, <strong>Liquibase</strong>, <strong>Spring Boot/Spring Batch</strong>, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="meta">
+            <div class="upper-row">
+              <h3 class="job-title">Engineer · Full Stack Web Developer</h3>
+              <div class="time">mayo 2021 - enero 2025</div>
+            </div>
+            <div class="company">NTT DATA · Madrid</div>
+          </div>
+          <div class="details">
+            <p>Proyectos en banca (Sabadell, Santander, BBVA) con foco en plataformas de datos y producto.</p>
+            <ul>
+              <li>Banc Sabadell: solución de recomendación de inversión (validaciones, normalizaciones e integraciones).</li>
+              <li>Banco Santander: migración <strong>Active Pivot 3.6 → 6</strong>, construcción de cubos (PnL, VaR) y dashboards.</li>
+              <li>Banco BBVA: reporting en <strong>Atoti</strong> (XVA, PnL), diseño de arquitectura y toma de requisitos con cliente.</li>
+              <li>Participación en iniciativas internas de I+D+i y <strong>mentorización de perfiles junior</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="meta">
+            <div class="upper-row">
+              <h3 class="job-title">Android Developer</h3>
+              <div class="time">febrero 2020 - abril 2021</div>
+            </div>
+            <div class="company">Universidad de Alcalá · Alcalá de Henares</div>
+          </div>
+          <div class="details">
+            <p>Desarrollo de aplicación Android (Java) para captura de datos de un estudio de comportamiento de aves.</p>
+            <ul>
+              <li>Toma de requisitos, desarrollo end-to-end, puesta en producción y soporte.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section projects-section">
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+          </span>
+          Proyectos destacados
+        </h2>
+        <div class="intro">
+          <p>Selección de proyectos representativos.</p>
+        </div>
+        <div class="item">
+          <span class="project-title">Plataforma ActiveViam (banca)</span>
+          - <span class="project-tagline">Migración de plataforma, modelado de cubos (PnL/VaR) y dashboards orientados a negocio.</span>
+        </div>
+        <div class="item">
+          <span class="project-title">Ecosistema Fénix / Campañas RREE (Intrum)</span>
+          - <span class="project-tagline">Backend Java/Spring Batch + MySQL/Liquibase: planificación de envíos, filtros, rendimiento e idempotencia.</span>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills-section section">
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
+          </span>
+          Habilidades técnicas
+        </h2>
+        <div class="skillset">
+          <div class="item">
+            <h3 class="level-title">Java · Spring Boot · Spring Batch</h3>
+            <div class="level-bar">
+              <div class="level-bar-inner" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <h3 class="level-title">SQL (MySQL/PostgreSQL) · Performance tuning</h3>
+            <div class="level-bar">
+              <div class="level-bar-inner" style="width: 88%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <h3 class="level-title">Liquibase · Modelado relacional · Migraciones</h3>
+            <div class="level-bar">
+              <div class="level-bar-inner" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <h3 class="level-title">JavaScript / TypeScript</h3>
+            <div class="level-bar">
+              <div class="level-bar-inner" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <h3 class="level-title">React / Next.js</h3>
+            <div class="level-bar">
+              <div class="level-bar-inner" style="width: 88%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <h3 class="level-title">ActiveViam (ActivePivot / Atoti)</h3>
+            <div class="level-bar">
+              <div class="level-bar-inner" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <h3 class="level-title">Testing (JUnit, Jest, Cypress)</h3>
+            <div class="level-bar">
+              <div class="level-bar-inner" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <h3 class="level-title">Docker · CI/CD (Jenkins/Azure Pipelines)</h3>
+            <div class="level-bar">
+              <div class="level-bar-inner" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="text-center">
+      <small class="copyright"></small>
+    </div>
+  </footer>
+
+  <script src="../assets/plugins/jquery-1.11.3.min.js"></script>
+  <script>
+    function generatePDF() {
+      var button = document.getElementById("pdfButton");
+      if (button) {
+        button.disabled = true;
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generando...';
+      }
+
+      var wrapper = document.querySelector(".wrapper");
+      if (!wrapper) {
+        console.error("Could not find .wrapper element");
+        if (button) { button.disabled = false; button.innerHTML = '<i class="fas fa-file-pdf"></i>PDF'; }
+        return;
+      }
+
+      var nameEl = document.querySelector(".name");
+      var name = nameEl ? nameEl.textContent.trim() : "CV";
+      var filename = name.replace(/\s+/g, "_") + "_Resume.pdf";
+
+      // Build a self-contained container with all styles + avoid-break overrides
+      var container = document.createElement("div");
+      container.style.cssText = "width: 210mm; font-family: Roboto, sans-serif;";
+
+      var styles = document.querySelectorAll('link[rel="stylesheet"], style');
+      styles.forEach(function(s) { container.appendChild(s.cloneNode(true)); });
+
+      var extraStyle = document.createElement("style");
+      extraStyle.textContent = [
+        "* { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }",
+        // Sections CAN break — only individual items stay together
+        ".section, .summary-section, .experiences-section, .projects-section, .skills-section, .educations-section { page-break-inside: auto !important; break-inside: auto !important; }",
+        ".item, .skillset .item, .container-block { page-break-inside: avoid !important; break-inside: avoid !important; }",
+        // Section title sticks with first item below it
+        ".section-title, .container-block-title { page-break-after: avoid !important; break-after: avoid !important; }",
+        ".wrapper { border-radius: 0 !important; box-shadow: none !important; max-width: 100% !important; }",
+        ".main-wrapper { padding: 30px 35px !important; }",
+        ".section { margin-bottom: 18px !important; }",
+        ".section-title { margin-bottom: 12px !important; padding-bottom: 7px !important; }",
+        ".experiences-section .item, .educations-section .item { margin-bottom: 12px !important; padding-bottom: 12px !important; }",
+        ".summary { font-size: 13px !important; }",
+        ".details { font-size: 13px !important; }",
+        ".sidebar-wrapper .container-block { padding: 20px 25px !important; }",
+        ".print-button, .pdf-button { display: none !important; }",
+        ".level-bar-inner { background-color: #6ec0d4 !important; -webkit-print-color-adjust: exact !important; }",
+        ".sidebar-wrapper { -webkit-print-color-adjust: exact !important; }"
+      ].join("\n");
+      container.appendChild(extraStyle);
+      container.appendChild(wrapper.cloneNode(true));
+
+      var opt = {
+        margin: [7, 4, 7, 4],
+        filename: filename,
+        image: { type: "jpeg", quality: 0.97 },
+        html2canvas: { scale: 1.5, useCORS: true, letterRendering: true, logging: false },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait", compress: true },
+        pagebreak: {
+          // 'css' respects page-break-inside rules, 'legacy' is fallback
+          // Do NOT use 'avoid-all' — too aggressive, causes white gaps
+          mode: ["css", "legacy"],
+          avoid: [".item", ".skillset .item", ".container-block"]
+        }
+      };
+
+      html2pdf().set(opt).from(container).save()
+        .then(function() {
+          if (button) { button.disabled = false; button.innerHTML = '<i class="fas fa-file-pdf"></i>PDF'; }
+        })
+        .catch(function(err) {
+          console.error("Error generating PDF:", err);
+          if (button) { button.disabled = false; button.innerHTML = '<i class="fas fa-file-pdf"></i>PDF'; }
+        });
+    }
+  </script>
+</body>
+</html>

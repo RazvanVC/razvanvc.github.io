@@ -16,19 +16,23 @@ sidebar:
   pdf:
 
   languages:
-    - idiom: Español
-      level: Nativo
-    - idiom: Inglés
-      level: Avanzado
-    - idiom: Rumano
-      level: Nativo
+    title: Idiomas
+    info:
+      - idiom: Español
+        level: Nativo
+      - idiom: Inglés
+        level: Avanzado
+      - idiom: Rumano
+        level: Nativo
 
   interests:
-    - item: Arquitectura de software
-    - item: Sistemas distribuidos y rendimiento
-    - item: Data platforms (cubos, reporting)
-    - item: Producto digital
-    - item: IA aplicada y automatización
+    title: Intereses
+    info:
+      - item: Arquitectura de software
+      - item: Sistemas distribuidos y rendimiento
+      - item: Data platforms (cubos, reporting)
+      - item: Producto digital
+      - item: IA aplicada y automatización
 
 career-profile:
   title: Perfil profesional
@@ -42,52 +46,56 @@ career-profile:
     mentoría y revisión de PRs.
 
 education:
-  - degree: Máster Universitario en Desarrollo Ágil de Software para la Web
-    university: Universidad de Alcalá (UAH)
-    time: 2022 - 2024
-    details: |
-      Enfoque en desarrollo web moderno, buenas prácticas, metodologías ágiles y entrega continua.
+  title: Formación académica
+  info:
+    - degree: Máster Universitario en Desarrollo Ágil de Software para la Web
+      university: Universidad de Alcalá (UAH)
+      time: 2022 - 2024
+      details: |
+        Enfoque en desarrollo web moderno, buenas prácticas, metodologías ágiles y entrega continua.
 
-  - degree: Ingeniería en Sistemas de Información
-    university: Universidad de Alcalá (UAH)
-    time: 2018 - 2022
-    details: |
-      Formación aplicada a sistemas de información, modelado de datos, ingeniería de software
-      y proyectos.
+    - degree: Ingeniería en Sistemas de Información
+      university: Universidad de Alcalá (UAH)
+      time: 2018 - 2022
+      details: |
+        Formación aplicada a sistemas de información, modelado de datos, ingeniería de software
+        y proyectos.
 
 experiences:
-  - role: Senior Consultant / Senior Full Stack Engineer
-    time: enero 2025 - Actualidad
-    company: NFQ Consulting · Madrid (Remoto/Híbrido)
-    details: |
-      Consultoría en cliente (Santander) con implantación y evolución de soluciones basadas en **ActiveViam**.
-        - Desarrollo full stack y entrega de funcionalidades orientadas a negocio.
-        - Diseño/implementación de componentes de datos (cubos, modelos, reporting).
-        - Colaboración directa con stakeholders y equipos técnicos.
-        - En paralelo (ecosistema Intrum/Fénix): trabajo intensivo con **MySQL**, **Liquibase**,
-          **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
-      Consultoría en cliente (Intrum) con implantación y evolución de soluciones basadas en **Java/Spring**.
-        - Desarrollo full stack y entrega de funcionalidades orientadas a negocio.
-        - Diseño/implementación de componentes de datos y gestión de BBDD (DBA)
-        - Optimización de procesos criticos
-        - Trabajo intensivo con **MySQL**, **Liquibase**, **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
+  title: Experiencia profesional
+  info:
+    - role: Senior Consultant / Senior Full Stack Engineer
+      time: enero 2025 - Actualidad
+      company: NFQ Consulting · Madrid (Remoto/Híbrido)
+      details: |
+        Consultoría en cliente (Santander) con implantación y evolución de soluciones basadas en **ActiveViam**.
+          - Desarrollo full stack y entrega de funcionalidades orientadas a negocio.
+          - Diseño/implementación de componentes de datos (cubos, modelos, reporting).
+          - Colaboración directa con stakeholders y equipos técnicos.
+          - En paralelo (ecosistema Intrum/Fénix): trabajo intensivo con **MySQL**, **Liquibase**,
+            **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
+        Consultoría en cliente (Intrum) con implantación y evolución de soluciones basadas en **Java/Spring**.
+          - Desarrollo full stack y entrega de funcionalidades orientadas a negocio.
+          - Diseño/implementación de componentes de datos y gestión de BBDD (DBA)
+          - Optimización de procesos criticos
+          - Trabajo intensivo con **MySQL**, **Liquibase**, **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
 
-  - role: Engineer · Full Stack Web Developer
-    time: mayo 2021 - enero 2025
-    company: NTT DATA · Madrid
-    details: |
-      Proyectos en banca (Sabadell, Santander, BBVA) con foco en plataformas de datos y producto.
-        - Banc Sabadell: solución de recomendación de inversión (validaciones, normalizaciones e integraciones).
-        - Banco Santander: migración **Active Pivot 3.6 → 6**, construcción de cubos (PnL, VaR) y dashboards.
-        - Banco BBVA: reporting en **Atoti** (XVA, PnL), diseño de arquitectura y toma de requisitos con cliente.
-        - Participación en iniciativas internas de I+D+i y **mentorización de perfiles junior**.
+    - role: Engineer · Full Stack Web Developer
+      time: mayo 2021 - enero 2025
+      company: NTT DATA · Madrid
+      details: |
+        Proyectos en banca (Sabadell, Santander, BBVA) con foco en plataformas de datos y producto.
+          - Banc Sabadell: solución de recomendación de inversión (validaciones, normalizaciones e integraciones).
+          - Banco Santander: migración **Active Pivot 3.6 → 6**, construcción de cubos (PnL, VaR) y dashboards.
+          - Banco BBVA: reporting en **Atoti** (XVA, PnL), diseño de arquitectura y toma de requisitos con cliente.
+          - Participación en iniciativas internas de I+D+i y **mentorización de perfiles junior**.
 
-  - role: Android Developer
-    time: febrero 2020 - abril 2021
-    company: Universidad de Alcalá · Alcalá de Henares
-    details: |
-      Desarrollo de aplicación Android (Java) para captura de datos de un estudio de comportamiento de aves.
-        - Toma de requisitos, desarrollo end-to-end, puesta en producción y soporte.
+    - role: Android Developer
+      time: febrero 2020 - abril 2021
+      company: Universidad de Alcalá · Alcalá de Henares
+      details: |
+        Desarrollo de aplicación Android (Java) para captura de datos de un estudio de comportamiento de aves.
+          - Toma de requisitos, desarrollo end-to-end, puesta en producción y soporte.
 
 projects:
   title: Proyectos destacados
@@ -101,8 +109,6 @@ projects:
     - title: Ecosistema Fénix / Campañas RREE (Intrum)
       link:
       tagline: "Backend Java/Spring Batch + MySQL/Liquibase: planificación de envíos, filtros, rendimiento e idempotencia."
-
-publications:
 
 skills:
   title: Habilidades técnicas

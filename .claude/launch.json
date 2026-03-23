@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "CV Preview Server",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["_preview/server.js"],
+      "port": 4000
+    },
+    {
+      "name": "Jekyll Dev Server (Docker)",
+      "runtimeExecutable": "docker-compose",
+      "runtimeArgs": ["up"],
+      "port": 4000
+    },
+    {
+      "name": "Jekyll Dev Server (Local)",
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": ["exec", "jekyll", "serve", "--livereload"],
+      "port": 4000
+    }
+  ]
+}

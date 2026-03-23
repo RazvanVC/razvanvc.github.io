@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(bundle --version)",
+      "Bash(ruby --version)",
+      "Bash(npx --version)",
+      "Bash(where gem:*)",
+      "Bash(where ruby:*)",
+      "Bash(ls /c/Ruby*)",
+      "Read(//c/Program Files/**)",
+      "Bash(choco install:*)",
+      "Bash(npm list:*)",
+      "Bash(pip install:*)",
+      "Bash(python -c \":*)"
+    ]
+  }
+}
