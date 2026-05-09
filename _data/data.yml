@@ -32,7 +32,7 @@ sidebar:
       - item: Automatización de procesos de negocio a gran escala
       - item: Plataformas de datos y reporting analítico
       - item: Liderazgo técnico y mentoring de equipos
-      - item: Producto SaaS y plataformas internas
+      - item: Gobernanza del dato y plataformas internas
       - item: IA aplicada y automatización con LLMs / agentes
 
 career-profile:
@@ -53,13 +53,7 @@ career-profile:
     Como **referente técnico** defino criterios de arquitectura, lidero refactors críticos
     (modelado relacional, idempotencia, performance), reviso PRs y formo equipo. He
     diseñado y entregado un **programa formativo de 10 sesiones sobre ActiveViam/Atoti**
-    dirigido a perfiles cross-team. En paralelo desarrollo **CitaBOT**, un SaaS propio
-    de automatización de citas, que me mantiene en el filo del stack moderno
-    (TypeScript, monorepos, cloud, arquitectura hexagonal).
-
-    **Foco profesional próximo:** roles de **Tech Lead, Engineering Manager u
-    Operations Manager** en organizaciones donde la automatización a gran escala y
-    la gobernanza del dato sean un activo estratégico.
+    dirigido a perfiles cross-team.
 
 education:
   title: Formación académica
@@ -136,8 +130,8 @@ experiences:
 projects:
   title: Proyectos destacados
   intro: >
-    Selección de proyectos relevantes — combinación de arquitectura, automatización
-    a escala, plataformas de datos y producto SaaS personal.
+    Selección de proyectos relevantes — arquitectura, automatización a gran escala,
+    plataformas de datos y reporting financiero.
   assignments:
     - title: Automatización de procesos masivos · Spring Batch + MySQL
       link:
@@ -161,17 +155,6 @@ projects:
         Atoti (modelado de cubos, joins, agregaciones, postprocessors, formatos),
         dirigido a perfiles cross-team. Materiales reutilizables y trazabilidad de
         aprendizaje.
-
-    - title: CitaBOT — SaaS de automatización de citas (proyecto personal)
-      link: https://github.com/razvanvc
-      tagline: >
-        SaaS multi-tenant para automatización de citas y recordatorios. Stack:
-        <strong>TypeScript</strong>, <strong>Node.js/Fastify</strong>,
-        <strong>PostgreSQL</strong>, <strong>monorepo pnpm + Turborepo</strong>,
-        <strong>arquitectura hexagonal</strong>, <strong>feature flags</strong>,
-        integración con <strong>Stripe</strong> y proveedores externos. Despliegue
-        en <strong>Fly.io</strong> con Docker multi-stage. ADRs y especificaciones
-        versionadas.
 
     - title: Plataforma de recomendación de inversión (Banc Sabadell)
       link:
@@ -198,12 +181,10 @@ skills:
       level: 90%
     - name: "ActiveViam (ActivePivot · Atoti SDK) · Cubos OLAP"
       level: 85%
-    - name: "TypeScript · Node.js · Fastify · React/Next.js"
+    - name: "JavaScript · TypeScript · React · Next.js"
       level: 85%
     - name: "Docker · CI/CD (Jenkins, Azure Pipelines, GitHub Actions)"
       level: 80%
-    - name: "Cloud (Fly.io, Azure) · Monorepos (pnpm, Turborepo)"
-      level: 78%
     - name: "Testing (JUnit, Mockito, Jest, Cypress) · TDD"
       level: 80%
     - name: "Metodologías Agile · Scrum · Interlocución con cliente"
