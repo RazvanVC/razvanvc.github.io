@@ -4,7 +4,7 @@ sidebar:
 
   # Información principal
   name: Razvan Virgil Craciun
-  tagline: Senior Full Stack Engineer · Java/Spring · React · Data Platforms
+  tagline: Tech Lead · Solution Architect — Java/Spring · Data Platforms · Automatización de procesos a gran escala
   avatar: profile.png
 
   # Contacto
@@ -20,30 +20,46 @@ sidebar:
     info:
       - idiom: Español
         level: Nativo
-      - idiom: Inglés
-        level: Avanzado
       - idiom: Rumano
         level: Nativo
+      - idiom: Inglés
+        level: Avanzado (C1)
 
   interests:
-    title: Intereses
+    title: Áreas de interés
     info:
-      - item: Arquitectura de software
-      - item: Sistemas distribuidos y rendimiento
-      - item: Data platforms (cubos, reporting)
-      - item: Producto digital
-      - item: IA aplicada y automatización
+      - item: Arquitectura de software (hexagonal, DDD, event-driven)
+      - item: Automatización de procesos de negocio a gran escala
+      - item: Plataformas de datos y reporting analítico
+      - item: Liderazgo técnico y mentoring de equipos
+      - item: Producto SaaS y plataformas internas
+      - item: IA aplicada y automatización con LLMs / agentes
 
 career-profile:
   title: Perfil profesional
   summary: |
-    Ingeniero de software **full stack** con +6 años de experiencia en consultoría y producto,
-    construyendo soluciones E2E (frontend, backend y datos) para banca e industria.
+    **Tech Lead / Solution Architect** con +6 años entregando soluciones end-to-end
+    para clientes de **banca** (Santander, BBVA, Sabadell) y **real estate / servicios
+    financieros** (Intrum). Combino perfil técnico **full stack** (Java/Spring, React/
+    TypeScript, SQL) con responsabilidad de **arquitectura**, **liderazgo de equipo**
+    e **interlocución directa con cliente**.
 
-    Especializado en **Java/Spring**, **SQL/MySQL**, **React/TypeScript** y ecosistemas BI
-    (ActiveViam/Atoti), con foco en **calidad**, **rendimiento** y entregables mantenibles.
-    Acostumbrado a trabajar con equipos multidisciplinares, **interlocución con cliente**,
-    mentoría y revisión de PRs.
+    Especializado en **automatización de procesos de negocio a gran escala**: diseño
+    e implementación de pipelines batch, orquestación de flujos masivos, gobernanza de
+    datos y plataformas analíticas. Stack principal **Spring Boot / Spring Batch**,
+    **MySQL/PostgreSQL** y **ActiveViam (Atoti)**, con foco en rendimiento, idempotencia
+    y mantenibilidad.
+
+    Como **referente técnico** defino criterios de arquitectura, lidero refactors críticos
+    (modelado relacional, idempotencia, performance), reviso PRs y formo equipo. He
+    diseñado y entregado un **programa formativo de 10 sesiones sobre ActiveViam/Atoti**
+    dirigido a perfiles cross-team. En paralelo desarrollo **CitaBOT**, un SaaS propio
+    de automatización de citas, que me mantiene en el filo del stack moderno
+    (TypeScript, monorepos, cloud, arquitectura hexagonal).
+
+    **Foco profesional próximo:** roles de **Tech Lead, Engineering Manager u
+    Operations Manager** en organizaciones donde la automatización a gran escala y
+    la gobernanza del dato sean un activo estratégico.
 
 education:
   title: Formación académica
@@ -52,80 +68,143 @@ education:
       university: Universidad de Alcalá (UAH)
       time: 2022 - 2024
       details: |
-        Enfoque en desarrollo web moderno, buenas prácticas, metodologías ágiles y entrega continua.
+        Desarrollo web moderno, arquitecturas distribuidas, metodologías ágiles e
+        integración/entrega continua (CI/CD).
 
-    - degree: Ingeniería en Sistemas de Información
+    - degree: Grado en Ingeniería de Sistemas de Información
       university: Universidad de Alcalá (UAH)
       time: 2018 - 2022
       details: |
-        Formación aplicada a sistemas de información, modelado de datos, ingeniería de software
-        y proyectos.
+        Sistemas de información, modelado de datos, ingeniería del software, bases de
+        datos relacionales y gestión de proyectos.
 
 experiences:
   title: Experiencia profesional
   info:
-    - role: Senior Consultant / Senior Full Stack Engineer
-      time: enero 2025 - Actualidad
-      company: NFQ Consulting · Madrid (Remoto/Híbrido)
+    - role: Senior Consultant · Tech Lead — Full Stack & Data Platforms
+      time: ene 2025 - Actualidad
+      company: NFQ Consulting · Madrid (Híbrido)
       details: |
-        Consultoría en cliente (Santander) con implantación y evolución de soluciones basadas en **ActiveViam**.
-          - Desarrollo full stack y entrega de funcionalidades orientadas a negocio.
-          - Diseño/implementación de componentes de datos (cubos, modelos, reporting).
-          - Colaboración directa con stakeholders y equipos técnicos.
-          - En paralelo (ecosistema Intrum/Fénix): trabajo intensivo con **MySQL**, **Liquibase**,
-            **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
-        Consultoría en cliente (Intrum) con implantación y evolución de soluciones basadas en **Java/Spring**.
-          - Desarrollo full stack y entrega de funcionalidades orientadas a negocio.
-          - Diseño/implementación de componentes de datos y gestión de BBDD (DBA)
-          - Optimización de procesos criticos
-          - Trabajo intensivo con **MySQL**, **Liquibase**, **Spring Boot/Spring Batch**, optimización de consultas y refactors de PK/FK, idempotencia y rendimiento.
+        Referente técnico para dos clientes estratégicos en paralelo: **Banco Santander**
+        (plataforma analítica ActiveViam) e **Intrum** (real estate / servicios
+        financieros). Combino arquitectura, desarrollo y liderazgo técnico.
 
-    - role: Engineer · Full Stack Web Developer
-      time: mayo 2021 - enero 2025
+          - **Automatización de procesos a gran escala (Intrum):** diseño y desarrollo
+            de pipelines **Spring Boot / Spring Batch** sobre **MySQL** para campañas
+            masivas — planificación, segmentación, **idempotencia**, recovery y
+            optimización de consultas. Migraciones versionadas con **Liquibase** y
+            refactors de modelo relacional para garantizar consistencia y rendimiento.
+          - **Plataforma analítica ActiveViam / Atoti (Santander):** diseño y evolución
+            de cubos OLAP, modelos de datos y dashboards de reporting financiero.
+            Integración con orígenes batch.
+          - **Liderazgo técnico:** definición de criterios de arquitectura, code review,
+            mentoring de juniors y diseño de un **programa formativo de 10 sesiones**
+            sobre ActiveViam/Atoti dirigido a perfiles cross-team.
+          - **Modelado de dominio y documentación técnica:** especificaciones
+            funcionales, ADRs y arquitectura de información para reducir el tiempo de
+            onboarding y minimizar incidentes en producción.
+          - Interlocución directa con cliente, planning ágil y entregas incrementales.
+
+    - role: Software Engineer · Full Stack Web Developer
+      time: may 2021 - ene 2025
       company: NTT DATA · Madrid
       details: |
-        Proyectos en banca (Sabadell, Santander, BBVA) con foco en plataformas de datos y producto.
-          - Banc Sabadell: solución de recomendación de inversión (validaciones, normalizaciones e integraciones).
-          - Banco Santander: migración **Active Pivot 3.6 → 6**, construcción de cubos (PnL, VaR) y dashboards.
-          - Banco BBVA: reporting en **Atoti** (XVA, PnL), diseño de arquitectura y toma de requisitos con cliente.
-          - Participación en iniciativas internas de I+D+i y **mentorización de perfiles junior**.
+        Proyectos en **banca** orientados a plataformas de datos, reporting regulatorio
+        y producto digital. Stack principal: **Java/Spring**, **React**, **ActiveViam**.
 
-    - role: Android Developer
-      time: febrero 2020 - abril 2021
+          - **Banco Santander:** lideré técnicamente la migración de plataforma
+            **ActivePivot 3.6 → 6**, construcción de cubos (**PnL**, **VaR**) y
+            dashboards para mesas de tesorería.
+          - **Banco BBVA:** reporting en **Atoti** (**XVA**, **PnL**), diseño de
+            arquitectura de cubos y toma de requisitos con cliente final.
+          - **Banc Sabadell:** solución de recomendación de inversión — validaciones,
+            normalización de datos e integraciones con sistemas internos.
+          - **I+D+i:** participación en iniciativas de innovación, prototipado y
+            mentoring técnico a perfiles junior en onboarding.
+
+    - role: Android Developer (proyecto de investigación)
+      time: feb 2020 - abr 2021
       company: Universidad de Alcalá · Alcalá de Henares
       details: |
-        Desarrollo de aplicación Android (Java) para captura de datos de un estudio de comportamiento de aves.
-          - Toma de requisitos, desarrollo end-to-end, puesta en producción y soporte.
+        Desarrollo end-to-end de una aplicación **Android nativa (Java)** para captura
+        de datos en un estudio científico de comportamiento de aves.
+
+          - Toma de requisitos con el equipo de investigación, diseño, desarrollo,
+            puesta en producción y soporte.
+          - Sincronización offline-first y exportación de datasets para análisis posterior.
 
 projects:
   title: Proyectos destacados
   intro: >
-    Selección de proyectos representativos.
+    Selección de proyectos relevantes — combinación de arquitectura, automatización
+    a escala, plataformas de datos y producto SaaS personal.
   assignments:
-    - title: Plataforma ActiveViam (banca)
+    - title: Automatización de procesos masivos · Spring Batch + MySQL
       link:
-      tagline: "Migración de plataforma, modelado de cubos (PnL/VaR) y dashboards orientados a negocio."
+      tagline: >
+        Diseño e implementación de pipelines batch para procesamiento masivo en cliente
+        de real estate: planificación, segmentación, idempotencia, recovery y
+        rendimiento. Migraciones versionadas con <strong>Liquibase</strong>, refactors
+        de modelo relacional y optimización de consultas SQL.
 
-    - title: Ecosistema Fénix / Campañas RREE (Intrum)
+    - title: Plataforma ActiveViam / Atoti — Banca (Santander, BBVA)
       link:
-      tagline: "Backend Java/Spring Batch + MySQL/Liquibase: planificación de envíos, filtros, rendimiento e idempotencia."
+      tagline: >
+        Migración ActivePivot 3.6 → 6, modelado de cubos OLAP
+        (<strong>PnL, VaR, XVA</strong>), dashboards y conectores batch para
+        reporting financiero regulatorio.
+
+    - title: Programa formativo ActiveViam/Atoti (Tech Lead)
+      link:
+      tagline: >
+        Diseño curricular y entrega de <strong>10 sesiones</strong> sobre el SDK de
+        Atoti (modelado de cubos, joins, agregaciones, postprocessors, formatos),
+        dirigido a perfiles cross-team. Materiales reutilizables y trazabilidad de
+        aprendizaje.
+
+    - title: CitaBOT — SaaS de automatización de citas (proyecto personal)
+      link: https://github.com/razvanvc
+      tagline: >
+        SaaS multi-tenant para automatización de citas y recordatorios. Stack:
+        <strong>TypeScript</strong>, <strong>Node.js/Fastify</strong>,
+        <strong>PostgreSQL</strong>, <strong>monorepo pnpm + Turborepo</strong>,
+        <strong>arquitectura hexagonal</strong>, <strong>feature flags</strong>,
+        integración con <strong>Stripe</strong> y proveedores externos. Despliegue
+        en <strong>Fly.io</strong> con Docker multi-stage. ADRs y especificaciones
+        versionadas.
+
+    - title: Plataforma de recomendación de inversión (Banc Sabadell)
+      link:
+      tagline: >
+        Validaciones, normalización de datos e integraciones del motor de
+        recomendación para el área de inversión.
 
 skills:
-  title: Habilidades técnicas
+  title: Habilidades y competencias
   toolset:
-    - name: Java · Spring Boot · Spring Batch
+    - name: "Liderazgo técnico · Mentoring · Code review · Roadmapping"
       level: 90%
-    - name: SQL (MySQL/PostgreSQL) · Performance tuning
+    - name: "Arquitectura de software (hexagonal, DDD, event-driven)"
       level: 88%
-    - name: Liquibase · Modelado relacional · Migraciones
-      level: 85%
-    - name: JavaScript / TypeScript
+    - name: "Automatización de procesos a gran escala (Spring Batch, ETL)"
+      level: 92%
+    - name: "Diseño de plataformas de datos · Modelado de dominio · ADRs"
+      level: 88%
+    - name: "Java · Spring Boot · Spring Batch"
+      level: 92%
+    - name: "SQL (MySQL, PostgreSQL) · Performance tuning · Modelado relacional"
       level: 90%
-    - name: React / Next.js
-      level: 88%
-    - name: ActiveViam (ActivePivot / Atoti)
+    - name: "Liquibase · Migraciones versionadas · Gobernanza de esquema"
+      level: 90%
+    - name: "ActiveViam (ActivePivot · Atoti SDK) · Cubos OLAP"
       level: 85%
-    - name: Testing (JUnit, Jest, Cypress)
+    - name: "TypeScript · Node.js · Fastify · React/Next.js"
+      level: 85%
+    - name: "Docker · CI/CD (Jenkins, Azure Pipelines, GitHub Actions)"
       level: 80%
-    - name: Docker · CI/CD (Jenkins/Azure Pipelines)
+    - name: "Cloud (Fly.io, Azure) · Monorepos (pnpm, Turborepo)"
+      level: 78%
+    - name: "Testing (JUnit, Mockito, Jest, Cypress) · TDD"
       level: 80%
+    - name: "Metodologías Agile · Scrum · Interlocución con cliente"
+      level: 92%
