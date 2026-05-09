@@ -14,7 +14,7 @@
       <h3 class="level-title">{{ skill.name }}</h3>
       {% assign skill_level = 'width: ' | append: skill.level %}
       <div class="level-bar">
-        <div class="level-bar-inner" style="{{skill_level}}"></div>
+        <div class="level-bar-inner" data-level="{{ skill.level }}" style="{{ skill_level }}"></div>
       </div>
       <!--//level-bar-->
     </div>

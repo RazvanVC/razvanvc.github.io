@@ -1,79 +1,275 @@
+/* ===========================================================
+   ATS-friendly view (used by /print page on screen + when printing)
+   - Single column, no graphics, no theme color blocks
+   - Standard serif typography
+   - A4 page-break rules to keep items together
+   =========================================================== */
+
+.ats-mode {
+  background: #fff;
+  color: #1a1a1a;
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-size: 11pt;
+  line-height: 1.45;
+  margin: 0;
+  padding: 0;
+
+  /* Default wrapping: long words / URLs break instead of getting clipped */
+  overflow-wrap: anywhere;
+  word-break: normal;
+
+  a { color: #1a1a1a; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+}
+
+.ats-mode .ats-document,
+.ats-mode .ats-document * {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.ats-controls {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+
+  .ats-btn {
+    background: #1f6b7c;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 1.2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease;
+
+    .fas { margin-right: 6px; }
+
+    &:hover { background: #155060; color: #fff; text-decoration: none; }
+    &:disabled { opacity: 0.6; cursor: not-allowed; }
+  }
+
+  .ats-btn-secondary {
+    background: #6c757d;
+    &:hover { background: #545b62; }
+  }
+}
+
+.ats-document {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 60px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ats-header {
+  text-align: left;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #1a1a1a;
+
+  .ats-name {
+    margin: 0 0 4px 0;
+    font-size: 22pt;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 0.3px;
+  }
+  .ats-tagline {
+    margin: 0 0 8px 0;
+    font-size: 12pt;
+    font-weight: 400;
+    color: #333;
+    font-style: italic;
+  }
+  .ats-contact {
+    margin: 0;
+    font-size: 10.5pt;
+    color: #333;
+    line-height: 1.5;
+  }
+}
+
+.ats-section {
+  margin-bottom: 18px;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.ats-section-title {
+  font-size: 12pt;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #1a1a1a;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.ats-summary {
+  p { margin: 0 0 6px 0; }
+  p:last-child { margin-bottom: 0; }
+  strong { color: #1a1a1a; }
+}
+
+.ats-intro {
+  margin: 0 0 8px 0;
+}
+
+.ats-item {
+  margin-bottom: 14px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+
+  &:last-child { margin-bottom: 0; }
+
+  .ats-item-title {
+    font-size: 11.5pt;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    color: #1a1a1a;
+  }
+  .ats-item-meta {
+    font-size: 10.5pt;
+    color: #555;
+    margin: 0 0 6px 0;
+    font-style: italic;
+  }
+  .ats-item-details {
+    p { margin: 0 0 4px 0; }
+    ul, ol {
+      margin: 4px 0 0 0;
+      padding-left: 22px;
+      li { margin-bottom: 3px; }
+    }
+    strong { color: #1a1a1a; }
+  }
+}
+
+.ats-list {
+  margin: 0;
+  padding-left: 22px;
+  list-style: disc;
+
+  li {
+    margin-bottom: 3px;
+    strong { color: #1a1a1a; }
+  }
+}
+
+/* ============================================================
+   Print rules — apply on /print AND on the main / page if
+   someone hits Ctrl+P there (legacy path)
+   ============================================================ */
 @media print {
   @page {
     size: A4;
-    margin: 10mm;
+    margin: 12mm 14mm;
   }
+
+  html, body {
+    background: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   body {
-    font-size: 9pt;
-    background-color: white;
-    padding: 0;
-  }
-  .wrapper {
-    max-width: 100%;
-    border-radius: 0;
-    box-shadow: none;
+    padding: 0 !important;
   }
 
-  .main-wrapper {
-    padding: 30px;
-    .section {
-      margin-bottom: 20px;
-    }
-    .section-title {
-      font-size: 14pt;
-      margin-bottom: 10px;
-      padding-bottom: 5px;
-    }
-    .experiences-section,
-    .educations-section {
-      .item {
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-      }
-    }
+  /* ATS document — fill page, no chrome */
+  .ats-mode {
+    background: #fff !important;
+    font-size: 10.5pt;
   }
 
-  .main-wrapper .time {
-    padding: 10px 30px 10px 10px;
-    -webkit-print-color-adjust: exact;
-  }
-  .sidebar-wrapper {
-    position: static;
-    -webkit-print-color-adjust: exact;
+  .ats-document {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
   }
 
-  .remove-container.container-block {
-    display: none;
-  }
-
-  footer {
-    display: none;
-  }
-
-  .skillset,
-  .container-block {
-    break-inside: avoid;
-  }
-
-  .item {
-    break-inside: avoid;
-  }
-
-  .skillset .level-bar-inner {
-    background-color: $theme-color !important;
-    -webkit-print-color-adjust: exact;
-  }
-
-  .fa-inverse,
-  .fa-inverse:after,
-  .fa-inverse:before {
-    color: #ffffff !important;
-  }
-
-  /* Hide buttons when printing */
+  .ats-controls,
+  .d-print-none,
   .print-button,
-  .pdf-button,
-  .d-print-none {
+  .pdf-button {
     display: none !important;
+  }
+
+  .ats-section,
+  .ats-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .ats-section-title {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* ============================================================
+     Legacy fallback: if user hits Ctrl+P on the main visual page,
+     force a readable single-column print (no sidebar cover page).
+     This is best-effort — the recommended flow is the /print page.
+     ============================================================ */
+  body:not(.ats-mode) {
+    .wrapper {
+      display: block !important;
+      max-width: 100% !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      background: #fff !important;
+    }
+    .sidebar-wrapper {
+      display: block !important;
+      width: 100% !important;
+      background: #fff !important;
+      color: #1a1a1a !important;
+      padding: 0 !important;
+
+      a, .name, .tagline, .container-block-title,
+      .education-container .meta,
+      .education-container .time,
+      .languages-container .lang-desc {
+        color: #1a1a1a !important;
+      }
+      .profile-container {
+        background: transparent !important;
+        text-align: left !important;
+        padding: 0 0 8px 0 !important;
+      }
+      .avatar { display: none !important; }
+      .container-block { padding: 6px 0 !important; }
+    }
+    .main-wrapper {
+      padding: 0 !important;
+      background: #fff !important;
+    }
+    .skillset .level-bar,
+    .skillset .level-bar-inner,
+    .fa-stack,
+    .fa-stack-2x,
+    .fa-stack-1x {
+      display: none !important;
+    }
+    .item, .container-block, .skillset .item {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .section-title, .container-block-title {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    footer { display: none !important; }
   }
 }

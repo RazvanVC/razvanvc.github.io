@@ -1,0 +1,100 @@
+{% assign sidebar = site.data.data.sidebar %}
+{% assign profile = site.data.data.career-profile %}
+{% assign experiences = site.data.data.experiences %}
+{% assign projects = site.data.data.projects %}
+{% assign education = site.data.data.education %}
+{% assign skills = site.data.data.skills %}
+{% assign languages = sidebar.languages %}
+
+<header class="ats-header">
+  {% if sidebar.name %}<h1 class="ats-name">{{ sidebar.name }}</h1>{% endif %}
+  {% if sidebar.tagline %}<p class="ats-tagline">{{ sidebar.tagline }}</p>{% endif %}
+  <p class="ats-contact">
+    {% if sidebar.email %}<span>{{ sidebar.email }}</span>{% endif %}
+    {% if sidebar.phone %}<span> · {{ sidebar.phone }}</span>{% endif %}
+    {% if sidebar.linkedin %}<span> · linkedin.com/in/{{ sidebar.linkedin }}</span>{% endif %}
+    {% if sidebar.github %}<span> · github.com/{{ sidebar.github }}</span>{% endif %}
+    {% if sidebar.website %}<span> · {{ sidebar.website }}</span>{% endif %}
+  </p>
+</header>
+
+{% if profile %}
+<section class="ats-section">
+  <h2 class="ats-section-title">{{ profile.title | default: "Perfil profesional" | upcase }}</h2>
+  <div class="ats-summary">{{ profile.summary | markdownify }}</div>
+</section>
+{% endif %}
+
+{% if experiences %}
+<section class="ats-section">
+  <h2 class="ats-section-title">{{ experiences.title | upcase }}</h2>
+  {% for experience in experiences.info %}
+  <article class="ats-item">
+    <h3 class="ats-item-title">{{ experience.role }}</h3>
+    <p class="ats-item-meta">
+      {% if experience.company %}{{ experience.company }}{% endif %}
+      {% if experience.company and experience.time %} · {% endif %}
+      {% if experience.time %}{{ experience.time }}{% endif %}
+    </p>
+    {% if experience.details %}
+    <div class="ats-item-details">{{ experience.details | markdownify }}</div>
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if projects %}
+<section class="ats-section">
+  <h2 class="ats-section-title">{{ projects.title | upcase }}</h2>
+  {% if projects.intro %}<p class="ats-intro">{{ projects.intro }}</p>{% endif %}
+  <ul class="ats-list">
+    {% for project in projects.assignments %}
+    <li>
+      <strong>{{ project.title }}</strong>{% if project.tagline %} — {{ project.tagline }}{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if education %}
+<section class="ats-section">
+  <h2 class="ats-section-title">{{ education.title | upcase }}</h2>
+  {% for graduation in education.info %}
+  <article class="ats-item">
+    <h3 class="ats-item-title">{{ graduation.degree }}</h3>
+    <p class="ats-item-meta">
+      {% if graduation.university %}{{ graduation.university }}{% endif %}
+      {% if graduation.university and graduation.time %} · {% endif %}
+      {% if graduation.time %}{{ graduation.time }}{% endif %}
+    </p>
+    {% if graduation.details %}
+    <div class="ats-item-details">{{ graduation.details | markdownify }}</div>
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if skills %}
+<section class="ats-section">
+  <h2 class="ats-section-title">{{ skills.title | upcase }}</h2>
+  <ul class="ats-list">
+    {% for skill in skills.toolset %}
+    <li>{{ skill.name }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if languages %}
+<section class="ats-section">
+  <h2 class="ats-section-title">{{ languages.title | upcase }}</h2>
+  <ul class="ats-list">
+    {% for language in languages.info %}
+    <li>{{ language.idiom }} — {{ language.level }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

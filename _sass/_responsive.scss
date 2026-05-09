@@ -1,16 +1,17 @@
-/* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
+/* Stack to single column on phones AND narrow tablets/laptops to avoid sidebar truncation */
+@media (max-width: 991px) {
   body {
     padding: 0;
   }
 
   .sidebar-wrapper {
     position: static;
-    width: inherit;
+    width: 100%;
   }
 
   .wrapper {
     display: block;
+    border-radius: 0;
   }
 
   .main-wrapper {
@@ -26,9 +27,6 @@
   .main-wrapper .upper-row {
     margin-bottom: 0;
   }
-}
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
 }
 
 /* Medium devices (desktops, 992px and up) */

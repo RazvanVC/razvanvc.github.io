@@ -50,6 +50,9 @@ p {
   order: $sidebar-order;
   background: $theme-color;
   color: #fff;
+  /* Long names / URLs / words must wrap, not get clipped by the wrapper's overflow:hidden */
+  overflow-wrap: anywhere;
+  word-break: normal;
   a {
     color: #fff;
   }
@@ -165,6 +168,8 @@ p {
   order: $resume-order;
   background: #fff;
   padding: 60px;
+  overflow-wrap: anywhere;
+  word-break: normal;
   .section-title {
     text-transform: uppercase;
     font-size: 18px;

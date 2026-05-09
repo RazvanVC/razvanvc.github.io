@@ -9,12 +9,8 @@
 {% include head.html %}
 
 <body>
-  <button onclick="print()" class="print-button d-print-none">
-    <i class="fas fa-file-pdf"></i>Print
-  </button>
-
-  <button onclick="generatePDF()" class="pdf-button d-print-none" id="pdfButton">
-    <i class="fas fa-file-pdf"></i>PDF
+  <button onclick="window.open('{{ site.baseurl }}/print#print', '_blank')" class="print-button d-print-none" type="button">
+    <i class="fas fa-print"></i> Imprimir CV (ATS)
   </button>
 
   <div class="wrapper">
@@ -28,7 +24,6 @@
   {% include footer.html %}
 
   {% include scripts.html %}
-  <script src="{{ site.baseurl }}/assets/js/pdf-generator.js"></script>
 </body>
 
 </html>
