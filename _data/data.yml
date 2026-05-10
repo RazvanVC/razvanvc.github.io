@@ -79,53 +79,85 @@ experiences:
       time: ene 2025 - Actualidad
       company: NFQ Consulting · Madrid (Híbrido)
       details: |
-        Referente técnico para dos clientes estratégicos en paralelo: **Banco Santander**
-        (plataforma analítica ActiveViam) e **Intrum** (real estate / servicios
-        financieros). Combino arquitectura, desarrollo y liderazgo técnico.
+        Llevo dos engagements en paralelo: **Intrum**, donde desarrollo, y
+        **Banco Santander**, donde doy soporte y formación al equipo de Atoti.
 
-          - **Automatización de procesos a gran escala (Intrum):** diseño y desarrollo
-            de pipelines **Spring Boot / Spring Batch** sobre **MySQL** para campañas
-            masivas — planificación, segmentación, **idempotencia**, recovery y
-            optimización de consultas. Migraciones versionadas con **Liquibase** y
-            refactors de modelo relacional para garantizar consistencia y rendimiento.
-          - **Plataforma analítica ActiveViam / Atoti (Santander):** diseño y evolución
-            de cubos OLAP, modelos de datos y dashboards de reporting financiero.
-            Integración con orígenes batch.
-          - **Liderazgo técnico:** definición de criterios de arquitectura, code review,
-            mentoring de juniors y diseño de un **programa formativo de 10 sesiones**
-            sobre ActiveViam/Atoti dirigido a perfiles cross-team.
-          - **Modelado de dominio y documentación técnica:** especificaciones
-            funcionales, ADRs y arquitectura de información para reducir el tiempo de
-            onboarding y minimizar incidentes en producción.
-          - Interlocución directa con cliente, planning ágil y entregas incrementales.
+          - **Intrum — Proyecto Fénix:** trabajo en real estate y servicios
+            financieros, construyendo y manteniendo procesos batch que mueven
+            volúmenes grandes. El día a día es **Spring Boot**, **Spring Batch** y
+            **MySQL**, y los problemas más interesantes suelen ser de
+            **idempotencia**, recovery y rendimiento. Cuando toca, gestiono
+            migraciones de esquema con **Liquibase** y hago refactors del modelo
+            relacional para mantener la consistencia.
+          - **Banco Santander — Soporte y enablement en Atoti:** el equipo del
+            cliente desarrolla sobre **Atoti** para reporting de **riesgo de
+            mercado bajo IMA/FRTB**. Mi rol es de soporte técnico continuo —
+            resuelvo dudas del SDK, desbloqueo casos complejos y traduzco
+            necesidades funcionales a patrones de modelado de cubos.
+          - **Programa formativo ActiveViam/Atoti:** diseñé y entregué un programa
+            de **10 sesiones** sobre el SDK — modelado de cubos, joins,
+            agregaciones, postprocessors, formatos — dirigido a perfiles cross-team.
 
-    - role: Software Engineer · Full Stack Web Developer
-      time: may 2021 - ene 2025
-      company: NTT DATA · Madrid
+        En lo transversal hago lo que se espera de un Tech Lead: defino criterios
+        de arquitectura, reviso PRs y marco el roadmap técnico; mentorizo a juniors
+        y mid; escribo la documentación que de verdad reduce el tiempo de onboarding
+        y los incidentes — ADRs, modelado de dominio, especificaciones — e
+        interlocuto directamente con cliente en planning ágil.
+
+    - role: Engineer · Full Stack Developer
+      time: jun 2023 - ene 2025
+      company: NTT DATA Europe & Latam · Madrid (Remoto)
       details: |
-        Proyectos en **banca** orientados a plataformas de datos, reporting regulatorio
-        y producto digital. Stack principal: **Java/Spring**, **React**, **ActiveViam**.
+        Etapa senior dentro de NTT DATA, con responsabilidad técnica creciente en
+        proyectos de banca — arquitectura de cubos, lead de migraciones y mentoring.
 
           - **Banco Santander:** lideré técnicamente la migración de plataforma
-            **ActivePivot 3.6 → 6**, construcción de cubos (**PnL**, **VaR**) y
-            dashboards para mesas de tesorería.
-          - **Banco BBVA:** reporting en **Atoti** (**XVA**, **PnL**), diseño de
-            arquitectura de cubos y toma de requisitos con cliente final.
-          - **Banc Sabadell:** solución de recomendación de inversión — validaciones,
-            normalización de datos e integraciones con sistemas internos.
-          - **I+D+i:** participación en iniciativas de innovación, prototipado y
-            mentoring técnico a perfiles junior en onboarding.
+            **ActivePivot 3.6 → 6**, con construcción de cubos OLAP — **PnL**,
+            **VaR** — y dashboards para mesas de tesorería, integrados con motores
+            de cálculo y orígenes batch.
+          - **Banco BBVA:** reporting en **Atoti** para áreas de mercados —
+            **XVA** y **PnL** —, con diseño de arquitectura de cubos y toma de
+            requisitos con cliente final.
+          - **Mentoring e I+D+i:** acompañamiento a perfiles junior, code review y
+            participación en iniciativas internas de innovación y prototipado.
 
-    - role: Android Developer (proyecto de investigación)
+    - role: Junior Engineer · Full Stack
+      time: feb 2022 - jun 2023
+      company: NTT DATA Europe & Latam · Madrid
+      details: |
+        Etapa de consolidación: desarrollo full stack con creciente autonomía en
+        proyectos de banca, con foco en plataformas de datos y producto digital.
+
+          - **Banc Sabadell:** plataforma de recomendación de inversión —
+            validaciones, normalización de datos e integraciones con sistemas
+            internos del banco. Toma de requisitos funcionales con cliente y
+            entrega de funcionalidades end-to-end.
+          - **Banco Santander:** contribución al desarrollo de cubos OLAP y
+            dashboards dentro del equipo de plataforma analítica del cliente.
+          - **Buenas prácticas:** adopción de PRs, testing y revisión cruzada con
+            perfiles senior. Refinamiento de patrones de diseño en Java/Spring y
+            de componentes en React.
+
+    - role: Student · Contrato de prácticas
+      time: may 2021 - ene 2022
+      company: NTT DATA Europe & Latam · Madrid
+      details: |
+        Primeras prácticas con incorporación a proyectos reales de cliente desde
+        el primer mes. Onboarding intensivo en stack bancario — primeras
+        contribuciones a desarrollos full stack en **Java/Spring** y **React** bajo
+        supervisión de perfiles senior, aprendizaje del ecosistema de plataformas
+        analíticas usadas en banca (ActivePivot/Atoti) y adopción de buenas
+        prácticas de Git, testing y revisión de código en equipos de consultoría.
+
+    - role: Android Developer · Proyecto de investigación
       time: feb 2020 - abr 2021
       company: Universidad de Alcalá · Alcalá de Henares
       details: |
-        Desarrollo end-to-end de una aplicación **Android nativa (Java)** para captura
-        de datos en un estudio científico de comportamiento de aves.
-
-          - Toma de requisitos con el equipo de investigación, diseño, desarrollo,
-            puesta en producción y soporte.
-          - Sincronización offline-first y exportación de datasets para análisis posterior.
+        Desarrollo end-to-end de una aplicación **Android nativa (Java)** para
+        captura de datos en un estudio científico de comportamiento de aves: toma
+        de requisitos con el equipo de investigación, diseño, desarrollo, puesta
+        en producción y soporte. Sincronización offline-first y exportación de
+        datasets para análisis posterior.
 
 projects:
   title: Proyectos destacados
