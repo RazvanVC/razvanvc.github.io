@@ -47,7 +47,7 @@ career-profile:
     Especializado en **automatización de procesos de negocio a gran escala**: diseño
     e implementación de pipelines batch, orquestación de flujos masivos, gobernanza de
     datos y plataformas analíticas. Stack principal **Spring Boot / Spring Batch**,
-    **MySQL/PostgreSQL** y **ActiveViam (Atoti)**, con foco en rendimiento, idempotencia
+    **MySQL/PostgreSQL** y **ActiveViam (Atoti/Python)**, con foco en rendimiento, idempotencia
     y mantenibilidad.
 
     Como **referente técnico** defino criterios de arquitectura, lidero refactors críticos
@@ -90,12 +90,12 @@ experiences:
             migraciones de esquema con **Liquibase** y hago refactors del modelo
             relacional para mantener la consistencia.
           - **Banco Santander — Soporte y enablement en Atoti:** el equipo del
-            cliente desarrolla sobre **Atoti** para reporting de **riesgo de
+            cliente desarrolla sobre **Atoti** (Java & Python SDK) para reporting de **riesgo de
             mercado bajo IMA/FRTB**. Mi rol es de soporte técnico continuo —
             resuelvo dudas del SDK, desbloqueo casos complejos y traduzco
             necesidades funcionales a patrones de modelado de cubos.
           - **Programa formativo ActiveViam/Atoti:** diseñé y entregué un programa
-            de **10 sesiones** sobre el SDK — modelado de cubos, joins,
+            de **10 sesiones** sobre el Java & Python SDK — modelado de cubos, joins,
             agregaciones, postprocessors, formatos — dirigido a perfiles cross-team.
 
         En lo transversal hago lo que se espera de un Tech Lead: defino criterios
@@ -112,10 +112,10 @@ experiences:
         proyectos de banca — arquitectura de cubos, lead de migraciones y mentoring.
 
           - **Banco Santander:** lideré técnicamente la migración de plataforma
-            **ActivePivot 3.6 → 6**, con construcción de cubos OLAP — **PnL**,
+            **ActivePivot 3.6 → 6 (Java SDK)**, con construcción de cubos OLAP — **PnL**,
             **VaR** — y dashboards para mesas de tesorería, integrados con motores
             de cálculo y orígenes batch.
-          - **Banco BBVA:** reporting en **Atoti** para áreas de mercados —
+          - **Banco BBVA:** reporting en **Atoti (Python SDK)** para áreas de mercados —
             **XVA** y **PnL** —, con diseño de arquitectura de cubos y toma de
             requisitos con cliente final.
           - **Mentoring e I+D+i:** acompañamiento a perfiles junior, code review y
@@ -176,14 +176,14 @@ projects:
     - title: Plataforma ActiveViam / Atoti — Banca (Santander, BBVA)
       link:
       tagline: >
-        Migración ActivePivot 3.6 → 6, modelado de cubos OLAP
+        Migración ActivePivot 3.6 → 6 (Java SDK), modelado de cubos OLAP
         (<strong>PnL, VaR, XVA</strong>), dashboards y conectores batch para
         reporting financiero regulatorio.
 
     - title: Programa formativo ActiveViam/Atoti (Tech Lead)
       link:
       tagline: >
-        Diseño curricular y entrega de <strong>10 sesiones</strong> sobre el SDK de
+        Diseño curricular y entrega de <strong>10 sesiones</strong> sobre el Java & Python SDK de
         Atoti (modelado de cubos, joins, agregaciones, postprocessors, formatos),
         dirigido a perfiles cross-team. Materiales reutilizables y trazabilidad de
         aprendizaje.
